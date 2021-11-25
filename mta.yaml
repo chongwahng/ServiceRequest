@@ -1,0 +1,17 @@
+_schema-version: "3.2"
+ID: SimpleFlow
+version: 0.0.1
+modules:
+- name: ApprovalProcess
+  type: com.sap.application.content
+  path: ApprovalProcess
+  requires:
+  - name: workflow
+    parameters:
+      content-target: true
+resources:
+- name: workflow
+  parameters:
+    service-name: wm_workflow
+  type: org.cloudfoundry.existing-service
+

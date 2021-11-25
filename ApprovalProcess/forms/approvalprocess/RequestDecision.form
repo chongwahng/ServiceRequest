@@ -1,0 +1,70 @@
+{
+    "id": "requestdecision",
+    "schemaVersion": "1.1.0",
+    "name": "RequestDecision",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "name",
+            "type": "string",
+            "label": "Ticket number",
+            "readOnly": true,
+            "value": "${context.TicketNo}",
+            "control": {
+                "type": "TextArea",
+                "properties": {
+                    "height": "small"
+                }
+            },
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "requestor",
+            "type": "string",
+            "label": "Requestor",
+            "readOnly": true,
+            "value": "${context.RaisedBy}",
+            "control": {
+                "type": "TextArea",
+                "properties": {
+                    "height": "small"
+                }
+            },
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "details",
+            "type": "string",
+            "label": "Details",
+            "readOnly": true,
+            "value": "${context.Description}",
+            "control": {
+                "type": "TextArea",
+                "properties": {
+                    "height": "small"
+                }
+            },
+            "constraints": {
+                "required": false
+            }
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        },
+        {
+            "id": "reject",
+            "text": "Reject",
+            "decisionType": "negative"
+        }
+    ]
+}

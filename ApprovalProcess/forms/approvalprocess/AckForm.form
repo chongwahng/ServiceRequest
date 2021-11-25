@@ -1,0 +1,33 @@
+{
+    "id": "ackform",
+    "schemaVersion": "1.1.0",
+    "name": "AckForm",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "acktext",
+            "type": "string",
+            "label": "Acknowledgment",
+            "readOnly": true,
+            "value": "${context.product.Ack}",
+            "control": {
+                "type": "TextArea",
+                "properties": {
+                    "height": "medium"
+                }
+            },
+            "constraints": {
+                "required": false
+            }
+        }
+    ],
+    "decisions": [
+        {
+            "id": "confirm",
+            "text": "Confirm",
+            "decisionType": ""
+        }
+    ]
+}
